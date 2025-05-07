@@ -1,4 +1,4 @@
-import java.io.PrintStream; // needed when to create or use a PrintStream object explicitly
+import java.io.PrintStream; // needed when you want to create or use a PrintStream object explicitly
 
 //Interface: Defines engine behaviour that all vehicles must implement for startEngine and endEngine method
 
@@ -55,10 +55,10 @@ class Car extends Vehicle implements Engine
 }
 
 //Subclass: Bike is inherited from Vehicle that implement the interface Engine
-class BikeCar extends Vehicle implements Engine
+class Bike extends Vehicle implements Engine
 {
     //Constructor: Calls superclass constructor that sets brand and year
-    public BikeCar(String brand, int year) {
+    public Bike(String brand, int year) {
 
         super(brand, year);
     }
@@ -124,7 +124,7 @@ public class Abstraction
         Engine.o.println(); //Just a line break
 
         // Create a Bike object using a Vehicle reference (polymorphism)
-        Vehicle bike = new BikeCar("Hero-Honda", 2001);
+        Vehicle bike = new Bike("Hero-Honda", 2001);
         bike.displayInfo(); // Calls concrete method from Vehicle
         ((Engine) bike).startEngine(); // Cast to Engine to access startEngine
         bike.drive(); // Calls overridden drive method in bike
