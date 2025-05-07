@@ -104,7 +104,7 @@ class Boat extends Vehicle implements Engine
     @Override
     //Drive: Implements abstract drive method from Vehicle class
     public void drive() {
-        o.println("Boat is being driving...");
+        o.println("Boat is being sailing...");
     }
 }
 
